@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon-32x32.png">
+  <title>Frontend Mentor | Mortgage repayment calculator</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <div class="wrapper">
+    <div class="mini-wrapper-one">
+      <div class="heading">
+        <h3>Mortgage Calculator</h3>
+        <span id="clear-btn">Clear All</span>
+      </div>
+      <div class="number-input">
+        <label for="amount-input">Mortgage Amount</label>
+        <div class="amount-box">
+          <span class="pounds signs">&#163;</span>
+          <input type="number" name="mortgage-amount" id="amount-input" class="number-inputs">
+        </div>
+        <p class="err hide">This field is required</p>
+        
+  
+        <div class="mortgage-interest">
+          <div class="mortgage-term-wrapper">
+            <label for="term-input">Mortgage Term</label>
+            <div class="mini-box mini-one">
+              <input type="number" name="mortgage-term" id="term-input" class="number-inputs">
+              <span class="years signs">years</span>
+            </div>
+            <p class="err hide">This field is required</p>
+            
+          </div>
+  
+          <div class="interest-rate-wrapper">
+            <label for="rate-input">Interest Rate</label>
+            <div class="mini-box mini-two">
+              <input type="number" name="Interest-rate" id="rate-input" class="number-inputs">
+              <span class="percent signs">%</span>
+            </div>
+            <p class="err hide">This field is required</p>
+          </div>
+        </div>
+      </div>
+
+      
+      <label>Mortgage Type</label><br>
+      <div class="radios-wrapper">
+        <input type="radio" name="mortgage-type" id="repayment-btn"  class="radio-inputs">
+        <label for="repayment-btn">Repayment</label>
+      </div>
+      
+      <div class="radios-wrapper">
+        <input type="radio" name="mortgage-type" id="Interest-btn" class="radio-inputs" >
+        <label for="Interest-btn">Interest Only</label>
+      </div>
+      <p class="err hide">This field is required</p>
+      <button type="button" id="calculate-btn"><img src="assets/images/icon-calculator.svg" alt="calculator-icon"><span>Calculate Repayments</span></button>
+    </div>
+    <div class="mini-wrapper-two">
+
+      <div class="mini-wrap-two first-page">
+        <div class="image-illustration">
+          <img src="assets/images/illustration-empty.svg" alt="calculator-illustration">
+        </div>
+        <h3>Results shown here</h3>
+        <p  class="explanation-para">
+          Complete the form and click “calculate repayments” to see what 
+          your monthly repayments would be.
+        </p>
+      </div>
+
+      <div class="mini-wrap-two second-page">
+        <h3>Your results</h3>
+        <p>
+          Your results are shown below based on the information you provided. 
+          To adjust the results, edit the form and click “calculate repayments” again.
+        </p>
+        <div class="wrapper-results">
+          <p class="monthly-repayments-para">Your monthly repayments</p>
+          <p id="output-value"></p>
+          <hr>
+          <p>Total you'll repay over the term</p>
+          <p id="overall-value"></p>
+        </div>
+      </div>
+    </div>
+      
+  </div>
+
+  
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>. 
+    Coded by <a href="#">Thato</a>.
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
